@@ -1,0 +1,505 @@
+@import url('');
+
+:root {
+    --color-primary: #ffc222;
+    --color-secondry: #00a149;
+    --color-black: #1e1d23;
+    --color-text: #b0b0b0;
+    --color-white: #fff;
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondry: 'Quicksand', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:active,
+:hover,
+:focus {
+    outline: 0 !important;
+    outline-offset: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-primary) !important;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: 100%;
+    font-weight: 400;
+}
+
+/* ================ Custom scrollbar ================ */
+
+::-webkit-scrollbar {
+    width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-white);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-secondry);
+}
+
+/* ================ Custom CSS ================ */
+h1 {
+    font-size: 5.8rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--color-white);
+    text-shadow: 1px 0 6px #000;
+}
+
+h1 span {
+    color: var(--color-primary);
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: var(--font-secondry);
+    color: var(--color-secondry);
+    line-height: 3rem;
+}
+
+h4 {
+    color: var(--color-secondry);
+    font-family: var(--font-secondry);
+    text-transform: capitalize;
+    font-size: 1.125rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+h5 {
+    color: var(--color-black);
+    text-transform: capitalize;
+    font-family: var(--color-secondry);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.75;
+    letter-spacing: 1px;
+    color: var(--color-text);
+}
+
+.main-btn {
+    display: inline-block;
+    padding: 0.625rem 1.875rem;
+    line-height: 1.5625rem;
+    background-color: var(--color-primary);
+    border: 0.1875rem solid var(--color-primary);
+    color: var(--color-black);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.19);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+}
+
+.main-btn:hover {
+    background-color: transparent;
+    color: var(--color-primary);
+}
+
+.wrapper {
+    padding-top: 4.25rem;
+    padding-bottom: 4.25rem;
+}
+
+.text-content {
+    width: 70%;
+    margin: auto;
+}
+
+/* ================ Header ================ */
+.navigation-wrap {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+.navigation-wrap .nav-item {
+    padding: 0 0.625rem;
+    transition: all .3s linear;
+}
+
+.navbar-toggler:focus {
+    outline: unset;
+    border: unset;
+    box-shadow: none;
+}
+
+.nav-link {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: var(--color-white);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-primary) !important;
+}
+
+.navigation-wrap .main-btn {
+    padding: 0.3125rem 1.4375rem;
+    box-shadow: none;
+    margin-left: 0.625rem;
+}
+
+/* Change navbar styling on scroll */
+.navigation-wrap.scroll-on {
+    position: fixed;
+    background-color: var(--color-white);
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0.125rem 1.75rem rgba(0, 0, 0, 0.09);
+    transition: all .15s ease-in-out 0s;
+}
+
+.navigation-wrap.scroll-on .nav-link {
+    color: var(--color-black);
+}
+
+.navigation-wrap.scroll-on .nav-link:hover,
+.navigation-wrap.scroll-on .nav-link.active {
+    color: var(--color-primary);
+}
+
+/* ================ TOP BANNER ================ */
+.top-banner {
+    width: 100%;
+    background: url('../images/bg/bg-1.jpg') no-repeat center;
+    background-size: cover;
+    padding: 16.875rem 0 9.375rem;
+}
+
+.top-banner p {
+    color: var(--color-white);
+}
+
+
+/* ================ OUR MENU ================ */
+.our-menu .card {
+    border: none;
+}
+
+.our-menu .link_category_product {
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+.our-menu .link_category_product::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px dotted var(--color-secondry);
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%) scale(0);
+    background: var(--color-primary);
+    -webkit-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.card:hover .link_category_product::before {
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+.our-menu .cat-title a {
+    text-align: center;
+    font-size: 0.8125rem;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--color-black);
+}
+
+.card:hover .cat-title a {
+    color: var(--color-primary);
+}
+
+/* ================ ABOUT ================ */
+.about-section {
+    background: var(--color-black);
+}
+
+.about-section .card,
+.about-section .card img {
+    border-radius: 0.625rem;
+}
+
+.about-section .text-sec {
+    padding-left: 2rem;
+}
+
+.food-type {
+    padding-top: 3.25rem;
+}
+
+.food-type ul li {
+    font-size: 1rem;
+    color: var(--color-text);
+    line-height: 32px;
+    position: relative;
+    margin-left: 30px;
+}
+
+.food-type ul li::before {
+    content: '\f00c';
+    position: absolute;
+    left: -2.1875rem;
+    display: inline-block;
+    padding-right: 3px;
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--color-primary);
+    vertical-align: middle;
+}
+
+/* ================ EXPLORE FOOD ================ */
+.explore-food .card {
+    border: none;
+    border-color: transparent;
+    border-radius: 0.9375rem;
+}
+
+.explore-food .card img {
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+.explore-food .card span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    padding-bottom: 1rem;
+    border-bottom: 0.0625rem solid #eee;
+}
+
+.explore-food p {
+    color: var(--color-text);
+    font-size: 14px;
+    line-height: 22px;
+}
+
+/* ================ TESTIMONIAL ================ */
+.testimonial-section {
+    background: var(--color-secondry);
+}
+
+.testimonial-section h2 {
+    color: var(--color-white);
+}
+
+.testimonial-section .carousel-item {
+    margin-top: 3rem;
+    padding: 10rem 3.125rem;
+    background-color: var(--color-black);
+    border-radius: 0.9375rem;
+    text-align: center;
+}
+
+.testimonial-section .carousel-caption img {
+    max-width: 5rem;
+    border-radius: 50%;
+    padding: 0.3125rem;
+}
+
+.testimonial-section .carousel-caption p {
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+    font-weight: 300;
+    color: var(--color-white);
+    padding: 0 11% 0.625rem;
+}
+
+.testimonial-section .carousel-indicators {
+    bottom: -2.8125rem;
+}
+
+.testimonial-section .carousel-indicators button {
+    width: 15px;
+    height: 15px;
+    outline: none;
+    border-radius: 50%;
+    border: none;
+    margin-right: 1rem;
+    opacity: 0.2;
+}
+
+.testimonial-section .carousel-indicators button.active {
+    opacity: 1;
+}
+
+/* ================ FOOTER ================ */
+.footer {
+    background: var(--color-black);
+}
+
+.footer .footer-social a i {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    padding: 0 1rem;
+}
+
+.footer .footer-social a:hover i {
+    color: var(--color-primary);
+}
+
+.newsletter .form-control {
+    height: 3.225rem;
+    padding: 0 1.25rem;
+    font-size: 0.875rem;
+    width: 100%;
+    border-radius: 0;
+    background: transparent;
+    border: 0.1875rem solid var(--color-white);
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+.newsletter:hover .form-control {
+    border: 0.1875rem solid var(--color-primary);
+    color: var(--color-white);
+}
+
+.newsletter .main-btn {
+    height: 3.225rem;
+    padding: 0 1.25rem;
+    font-size: 0.875rem;
+    border-radius: 0;
+    background-color: var(--color-white);
+    border: 0.1875rem solid var(--color-white);
+    color: var(--color-black);
+    font-weight: 700;
+}
+
+.newsletter:hover .main-btn {
+    background: var(--color-primary);
+    border: 0.1875rem solid var(--color-primary);
+}
+
+.newsletter:hover .form-control:hover,
+.newsletter:hover .form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--color-primary);
+}
+
+/* ================ MEDIA QUERIES ================ */
+@media screen and (max-width: 991px) {
+    .text-content {
+        width: 100%;
+    }
+
+    /* navbar brand */
+    .navigation-wrap {
+        text-align: center;
+        background-color: var(--color-white);
+    }
+
+    .navigation-wrap .navbar-brand img {
+        height: 3.8125rem;
+    }
+
+    .navigation-wrap .nav-link {
+        line-height: 1.875rem;
+        color: var(--color-black);
+    }
+
+    /* banner */
+    .top-banner {
+        padding: 9.375rem 0 9.375rem;
+    }
+
+    /* carousel */
+    .testimonial-section .carousel-caption p {
+        padding: 0;
+    }
+
+    /* footer */
+    .footer .footer-social a i {
+        padding: 0 0,75rem;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        line-height: 28px;
+    }
+
+    /* top banner */
+    .top-banner {
+        padding: 10.375rem 0 9.375rem;
+    }
+
+    /* carousel */
+    .testimonial-section .carousel-item {
+        padding: 11rem 3.125rem;
+    } 
+}
+
+@media screen and (max-width: 330px) {
+    /* carousel */
+    .testimonial-section .carousel-item {
+        padding: 13rem 3.125rem;
+    } 
+}
+
